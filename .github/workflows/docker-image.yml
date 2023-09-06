@@ -25,5 +25,5 @@ jobs:
     - name: Build the Docker image
       run: |
           docker build . --file Dockerfile --tag flask-app:latest
-          docker tag flask-app:latest nextopsacr03.azurecr.io/flask-app:latest
-          docker push nextopsacr03.azurecr.io/flask-app:latest
+          docker tag flask-app:latest dockerimageregistrytest.azurecr.io/flask-app:latest
+          docker push dockerimageregistrytest.azurecr.io/flask-app:latest
