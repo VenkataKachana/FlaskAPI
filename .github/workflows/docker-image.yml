@@ -16,7 +16,6 @@ jobs:
     
     - name: Log into registry
       uses: docker/login-action@v1
-      #uses: docker/login-action@v2
       with:
           registry: ${{ secrets.ACR_NAME }}
           username: ${{ secrets.ACR_USERNAME }}
