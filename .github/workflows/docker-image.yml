@@ -17,7 +17,6 @@ jobs:
     - name: Log into registry
       uses: azure/docker-login@v1
       with:
-          registry: ${{ secrets.ACR_NAME }}
           login-server: dockerimageregistrytest.azurecr.io
           username: ${{ secrets.ACR_USERNAME }}
           password: ${{ secrets.ACR_PASSWORD }}
