@@ -27,22 +27,3 @@ jobs:
           docker build . --file Dockerfile --tag flask-app:latest
           docker tag flask-app:latest nextopsacr03.azurecr.io/flask-app:latest
           docker push nextopsacr03.azurecr.io/flask-app:latest
-       
-    - name: 'Terraform Execution'
-      uses: hashicorp/setup-terraform@v2
-
-    - name: Terraform Init
-      id: init
-      run: terraform init
-      working-directory: ./Terraform # Use your environment folder
-      shell: bash
-
-    - name: 'Login via Azure CLI'
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDS }}
-
-    - name: Terraform Apply
-      run: terraform apply --auto-approve
-      working-directory: ./Terraform # Use your environment folder
-      shell: bash  
