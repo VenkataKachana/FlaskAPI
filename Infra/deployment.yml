@@ -6,14 +6,14 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: FlaskAPI
+      app: flaskapi
   template:
     metadata:
       labels:
-        app: FlaskAPI
+        app: flaskapi
     spec:
       containers:
-        - name: FlaskAPI
+        - name: flaskapi
           imagePullPolicy: Always
           image: dockerimageregistrytest.azurecr.io/flask-app:latest
           ports:
