@@ -9,7 +9,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    name: Build & Push Docker Image
     steps:
     - name: Checkout Github Action
       uses: actions/checkout@v3
