@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: FlaskAPI
+  template:
+    metadata:
+      labels:
+        app: FlaskAPI
+    spec:
+      containers:
+        - name: FlaskAPI
+          imagePullPolicy: Always
+          image: dockerimageregistrytest.azurecr.io/flask-app:latest
+          ports:
+            - containerPort: 80
