@@ -8,9 +8,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/VenkataKachana/FlaskAPI.git'  # Corrected Git URL format
+    repoURL: 'https://github.com/VenkataKachana/FlaskAPI.git'   # Corrected Git URL format
     targetRevision: main
-    path: Infra # Path to the directory containing your deployment YAML files
+    path: Infra  # Path to the directory containing your deployment YAML files
   destination:
     server: 'https://kubernetes.default.svc'  # Your Kubernetes API server URL
     namespace: default
